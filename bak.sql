@@ -86,7 +86,6 @@ DROP TABLE IF EXISTS `orders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
   `OrderID` int(6) unsigned zerofill PRIMARY KEY NOT NULL,
-  `CustomerID` int(2) NOT NULL,
   `Date` date NOT NULL,
   `Time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
