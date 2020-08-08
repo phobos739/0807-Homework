@@ -23,10 +23,10 @@ ON od.ProductID = p.ProductID;
 4.請透過以下指令列出給外送人員的清單(含訂單編號、客戶名稱、地址、電話、客戶要求的送達時間與應跟客戶收的總金額):
 SELECT o.OrderID as '訂單編號', CustomerName as '客戶名稱', City, Dist, Rd, Sec, No, Phone, Time as '送達時間', SUM(Quantity * UnitPrice) AS '總金額'
 FROM orders AS o
-JOIN customers AS c 
-ON o.CustomerID= c.CustomerID
 JOIN orderdetails AS od 
 ON o.OrderID = od.OrderID
+JOIN customers AS c 
+ON od.CustomerID= c.CustomerID
 JOIN products AS p 
 ON od.ProductID = p.ProductID
 GROUP BY o.OrderID;
